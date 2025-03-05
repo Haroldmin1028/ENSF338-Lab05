@@ -2,6 +2,8 @@ import sys, timeit, numpy as np
 sys.setrecursionlimit(20000)
 
 class PQueue:
+    def __init__(self, capacity):
+        self.capacity = capacity
     def dequeue(self):
         if self.head == -1:
             return None
@@ -9,8 +11,7 @@ class PQueue:
             pass
 
 class PQueue_Mergesort(PQueue):
-    def __init__(self, capacity):
-        self.capacity = capacity
+
     def enqueue(self, element):
         pass
     def mergesort(arr, low, high):
