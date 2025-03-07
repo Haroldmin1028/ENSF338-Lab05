@@ -90,7 +90,7 @@ def randomlist():
 def queue(pqueue, tasks):
     for task in tasks:
         if task == 'enqueue':
-            pqueue.enqueue(np.random.randint(1, 800))
+            pqueue.enqueue(np.random.randint(10000))
         else:
             pqueue.dequeue()
 
@@ -99,7 +99,7 @@ def main():
     priorityqueue1 = PQueue_Mergesort(7000)
     priorityqueue2 = PQueue_Insert(7000)
 
-    for i in range(1, 11):
+    for i in range(1, 101):
         if i % 10 == 0:
             print(f"Performing tasks for {i}th time...")
         queuemerge += timeit.timeit(lambda: queue(priorityqueue1, randomlist()), number = 1)
