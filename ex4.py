@@ -96,5 +96,6 @@ if __name__ == "__main__":
     main()
 
 """
+This exercise was completed before the edit in the assignment, and implements the queue as a singly linked list with a tail pointer.
 5.  The array implementation of the queue performed better than the linked list implementation. The linked list implementation had a fatal flaw in the dequeuing process, where it was needed to traverse through the whole list each time to find the penultimate node, costing O(n). The tail pointer did not improve the performance of the linked list because it was a singly linked list. The enqueuing and dequeuing processes of the array implementation were both O(1).
 """
