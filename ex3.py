@@ -138,5 +138,22 @@ plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 plt.show()
 
+"""
+The Results are as followed:
+
+Array Stack: 
+We can clearly see that the execution times are lower, 
+and because the distribution is closer together, the times are more consistant
+
+Linked-List Stack:
+Here we can see that the execution times are higher than the array stack. Also, unlike the Array Stack, the distribution
+seems to always be spread out, meaning less consitency.
+
+Overall:
+The Internal Array stack is faster and far more consitent. That is most likely due to access of contiguous memory making
+the pop and push quicker. Where as the Linked-List stack is slower and has a larger time range making it less consitent.
+It also takes up more memory for push and pop
+
+"""
 
 
