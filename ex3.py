@@ -9,8 +9,7 @@ and pop() must remove the head element.
 
 4. Measure the performance time for each implementation to process 100 list (each with 10,000 elements) operations
 
-5. Plot the distribution of times (distributions for each implementation
-should be overlayed in the same plot; make sure to use consistent
+5. Plot the distribution of times (distributions for each implementation should be overlayed in the same plot; make sure to use consistent
 ranges) and discuss the results.
 """
 import timeit
@@ -83,7 +82,7 @@ def tasks_list(size=10000): # Implementation for 3
             tasks.append(("pop",)) # extra comma is to make sure the last added tuple gets removed. It has to be a tuple
     return tasks
 
-def execution(stack, task_list): # Implementation for 4
+def execution(stack, task_list): # Implementation for 4, takes stack and a list of tasks
     for task in task_list:
         if task[0] == "push":
             stack.push(task[1])
@@ -92,12 +91,12 @@ def execution(stack, task_list): # Implementation for 4
 
 task_lists = [tasks_list() for i in range(100)]
 
-array_time = timeit.timeit( # implementation for 4
+array_time = timeit.timeit( # implementation for 4, 
     lambda: [execution(InternalPythonArray(), task_list) for task_list in task_lists], number=1
 
 )
 
-linked_list_time = timeit.timeit( # implementation for 4
+linked_list_time = timeit.timeit( # implementation for 4, creates a new stack for each of the 100 task lists then executes and times
     lambda: [execution(InternalSinglyLinkedList(), task_list) for task_list in task_lists], number=1
 )
 
