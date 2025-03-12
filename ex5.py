@@ -259,8 +259,8 @@ queue.dequeue()
 # 38. Dequeue, Expected output: dequeue None
 queue.dequeue()
 
-# 39. Enqueue 130, Expected output: enqueue 130
-queue.enqueue(130)
-
-# 40. Peek, Expected output: peek 130
+# 39. Peek, Expected output: peek None
 queue.peek()
+
+# 40. Enqueue 130, Expected output: enqueue 130
+queue.enqueue(130)
